@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="testlibraries.TC_03_VerifyPincode">
+        <methods>
+          <include name="tc_03_VerifyPincode"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_03_VerifyPincode -->
+      <class name="testlibraries.TC_01_AddingProductToCart">
+        <methods>
+          <include name="verifyAddToWhishlistAndCart"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_01_AddingProductToCart -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
