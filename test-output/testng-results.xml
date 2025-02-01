@@ -1,67 +1,109 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-01T16:24:24 IST" name="Default suite" finished-at="2025-02-01T16:25:00 IST" duration-ms="36002">
+  <suite started-at="2025-02-02T01:51:02 IST" name="Suite" finished-at="2025-02-02T01:54:25 IST" duration-ms="202467">
     <groups>
     </groups>
-    <test started-at="2025-02-01T16:24:24 IST" name="Default test" finished-at="2025-02-01T16:25:00 IST" duration-ms="36002">
+    <test started-at="2025-02-02T01:51:02 IST" name="Test" finished-at="2025-02-02T01:54:25 IST" duration-ms="202467">
       <class name="testlibraries.TC_01_AddingProductToCart">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2c532cd8]" started-at="2025-02-01T16:24:24 IST" name="opeApp" finished-at="2025-02-01T16:24:36 IST" duration-ms="11522" status="PASS">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@753432a2]" started-at="2025-02-02T01:51:02 IST" name="opeApp" finished-at="2025-02-02T01:51:14 IST" duration-ms="11830" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- opeApp -->
-        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2c532cd8]" started-at="2025-02-01T16:24:36 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-01T16:24:58 IST" duration-ms="21870" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [] but found [Printed 100% Polyster Double Bed Comforter for Winter]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [] but found [Printed 100% Polyster Double Bed Comforter for Winter]
-at org.testng.Assert.fail(Assert.java:99)
-at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-at org.testng.Assert.assertEquals(Assert.java:122)
-at org.testng.Assert.assertEquals(Assert.java:629)
-at org.testng.Assert.assertEquals(Assert.java:639)
-at testlibraries.TC_01_AddingProductToCart.verifyAddToWhishlistAndCart(TC_01_AddingProductToCart.java:91)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@753432a2]" started-at="2025-02-02T01:51:14 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-02T01:51:31 IST" duration-ms="16602" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddToWhishlistAndCart -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2c532cd8]" started-at="2025-02-01T16:24:58 IST" name="closeApp" finished-at="2025-02-01T16:25:00 IST" duration-ms="2369" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@753432a2]" started-at="2025-02-02T01:51:31 IST" name="closeApp" finished-at="2025-02-02T01:51:33 IST" duration-ms="2286" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- testlibraries.TC_01_AddingProductToCart -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testlibraries.TC_07_DeleteAddress">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_07_DeleteAddress@7c1e2a2d]" started-at="2025-02-02T01:53:37 IST" name="opeApp" finished-at="2025-02-02T01:53:48 IST" duration-ms="11109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opeApp -->
+        <test-method signature="tc_07_deleteAdd()[pri:0, instance:testlibraries.TC_07_DeleteAddress@7c1e2a2d]" started-at="2025-02-02T01:53:48 IST" name="tc_07_deleteAdd" finished-at="2025-02-02T01:53:58 IST" duration-ms="10471" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_07_deleteAdd -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_07_DeleteAddress@7c1e2a2d]" started-at="2025-02-02T01:53:58 IST" name="closeApp" finished-at="2025-02-02T01:54:01 IST" duration-ms="2241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_07_DeleteAddress -->
+      <class name="testlibraries.TC_05_ManufactureAddress">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@ec2cc4]" started-at="2025-02-02T01:52:35 IST" name="opeApp" finished-at="2025-02-02T01:52:48 IST" duration-ms="12210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opeApp -->
+        <test-method signature="tc_05_ManufactureAdd()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@ec2cc4]" started-at="2025-02-02T01:52:48 IST" name="tc_05_ManufactureAdd" finished-at="2025-02-02T01:53:06 IST" duration-ms="18211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_05_ManufactureAdd -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@ec2cc4]" started-at="2025-02-02T01:53:06 IST" name="closeApp" finished-at="2025-02-02T01:53:08 IST" duration-ms="2324" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_05_ManufactureAddress -->
+      <class name="testlibraries.TC_08_ResetFilterAddToWishlist">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@333dd51e]" started-at="2025-02-02T01:54:01 IST" name="opeApp" finished-at="2025-02-02T01:54:12 IST" duration-ms="11079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opeApp -->
+        <test-method signature="tc_08_resetFilter()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@333dd51e]" started-at="2025-02-02T01:54:12 IST" name="tc_08_resetFilter" finished-at="2025-02-02T01:54:22 IST" duration-ms="10399" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_08_resetFilter -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@333dd51e]" started-at="2025-02-02T01:54:22 IST" name="closeApp" finished-at="2025-02-02T01:54:25 IST" duration-ms="2484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_08_ResetFilterAddToWishlist -->
+      <class name="testlibraries.TC_04_InitiateCheckout">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@4097cac]" started-at="2025-02-02T01:52:04 IST" name="opeApp" finished-at="2025-02-02T01:52:17 IST" duration-ms="12875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opeApp -->
+        <test-method signature="tc_04_initiateCheckout()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@4097cac]" started-at="2025-02-02T01:52:17 IST" name="tc_04_initiateCheckout" finished-at="2025-02-02T01:52:33 IST" duration-ms="16282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_04_initiateCheckout -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@4097cac]" started-at="2025-02-02T01:52:33 IST" name="closeApp" finished-at="2025-02-02T01:52:35 IST" duration-ms="2511" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_04_InitiateCheckout -->
+      <class name="testlibraries.TC_06_addAddress">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_06_addAddress@2a5b3fee]" started-at="2025-02-02T01:53:08 IST" name="opeApp" finished-at="2025-02-02T01:53:21 IST" duration-ms="12274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opeApp -->
+        <test-method signature="tc_06_addingAddress()[pri:0, instance:testlibraries.TC_06_addAddress@2a5b3fee]" started-at="2025-02-02T01:53:21 IST" name="tc_06_addingAddress" finished-at="2025-02-02T01:53:35 IST" duration-ms="14049" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_06_addingAddress -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_06_addAddress@2a5b3fee]" started-at="2025-02-02T01:53:35 IST" name="closeApp" finished-at="2025-02-02T01:53:37 IST" duration-ms="2272" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_06_addAddress -->
+      <class name="testlibraries.TC_03_VerifyPincode">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_03_VerifyPincode@ccb4b1b]" started-at="2025-02-02T01:51:33 IST" name="opeApp" finished-at="2025-02-02T01:51:45 IST" duration-ms="12013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- opeApp -->
+        <test-method signature="tc_03_VerifyPincode()[pri:0, instance:testlibraries.TC_03_VerifyPincode@ccb4b1b]" started-at="2025-02-02T01:51:45 IST" name="tc_03_VerifyPincode" finished-at="2025-02-02T01:52:01 IST" duration-ms="16438" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_03_VerifyPincode -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_03_VerifyPincode@ccb4b1b]" started-at="2025-02-02T01:52:01 IST" name="closeApp" finished-at="2025-02-02T01:52:04 IST" duration-ms="2437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_03_VerifyPincode -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

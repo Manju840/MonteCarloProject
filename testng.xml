@@ -3,13 +3,13 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testlibraries.TC_03_VerifyPincode"/>
-      <class name="testlibraries.TC_06_addAddress"/>
       <class name="testlibraries.TC_01_AddingProductToCart"/>
+      <class name="testlibraries.TC_03_VerifyPincode"/>
+      <class name="testlibraries.TC_04_InitiateCheckout"/>
+      <class name="testlibraries.TC_05_ManufactureAddress"/>
+      <class name="testlibraries.TC_06_addAddress"/>
       <class name="testlibraries.TC_07_DeleteAddress"/>
       <class name="testlibraries.TC_08_ResetFilterAddToWishlist"/>
-      <class name="testlibraries.TC_05_ManufactureAddress"/>
-      <class name="testlibraries.TC_04_InitiateCheckout"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

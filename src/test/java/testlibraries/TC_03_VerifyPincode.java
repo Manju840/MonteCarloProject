@@ -19,6 +19,8 @@ public class TC_03_VerifyPincode extends BaseClass {
 
 	@Test
 	public void tc_03_VerifyPincode() throws EncryptedDocumentException, IOException, InterruptedException {
+		
+
 	Header header = new Header(driver);
 	header.clickLoginSignupButton();
 	
@@ -41,6 +43,7 @@ public class TC_03_VerifyPincode extends BaseClass {
 	productpage.clickSize();
 	productpage.selectSIze_38_M();
 	productpage.clickBrand();
+	webUtilities.waitForElementToBeClickable(productpage.getRockItBrandOption());
 	productpage.selectRockItBrandOption();
 	productpage.clickSleeve();
 	productpage.selectFullSleeve();

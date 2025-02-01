@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Set;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +17,25 @@ import org.testng.Reporter;
 
 public class WebDriverUtilities {
 	
+	private WebDriverWait wait;
+	public WebDriverUtilities(WebDriver driver) {
+//	        this.driver = driver;
+	        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	    }
 	
+	public WebElement waitForElementToBeVisible(WebElement locator) {
+        return wait.until(ExpectedConditions.visibilityOf(locator));
+    }
 	
+	public WebElement waitForElementToBeClickable(WebElement locator) {
+        return wait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+	
+	public WebElement waitForElementToRefreshed(WebElement ele) {
+		return wait.until(ExpectedConditions.refreshed(
+			    ExpectedConditions.elementToBeClickable(ele)
+				));
+	}
 	
 	public void mouseHover(WebElement ele, WebDriver driver) {
 		Actions action = new Actions(driver);
@@ -32,37 +50,6 @@ public class WebDriverUtilities {
 	public void rightClick(WebElement ele, WebDriver driver) {
 		Actions action = new Actions(driver);
 		action.contextClick(ele).perform();
-	}
-	
-//	public void dragSlider(WebElement slider, WebDriver driver, int xOffset) {
-//        Actions action = new Actions(driver);
-//        action.clickAndHold(slider).moveByOffset(xOffset, 0).release().perform();
-//    }
-	
-	public void dragSlider(WebElement slider, WebDriver driver, int targetValue, int maxValue) {
-        // Scroll the slider into view
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", slider);
-
-        // Calculate the percentage to move
-        double percentage = (double) targetValue / maxValue;
-
-        // Get the width of the slider
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        int sliderWidth = ((Long) js.executeScript("return arguments[0].offsetWidth;", slider)).intValue();
-
-        // Calculate the pixel offset
-        int xOffset = (int) (percentage * sliderWidth);
-
-        // Perform the drag operation
-        Actions action = new Actions(driver);
-        action.clickAndHold(slider).moveByOffset(xOffset, 0).release().perform();
-    }
-	
-	public void moveSliderToPrice(WebDriver driver,WebElement priceSlider, int targetPrice, int sliderWidth, int minVal, int maxVal) {
-		double pixelsPerPrice = (double) sliderWidth / (maxVal - minVal);
-		int offSet = (int) ((targetPrice - minVal) * pixelsPerPrice);
-		Actions action = new Actions(driver);
-		action.clickAndHold(priceSlider).moveByOffset(offSet, 0).release().perform();
 	}
 	
 	public void dropDown(WebElement ele, String text) {

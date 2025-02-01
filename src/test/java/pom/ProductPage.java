@@ -29,7 +29,7 @@ public class ProductPage {
 	@FindBy(xpath="//button[text()='Color']")
 	private WebElement color;
 	
-	@FindBy(xpath="//div[@class='color-swatch  ']")
+	@FindBy(xpath="//div[contains(@class,'color-swatch')]/div/label")
 	private WebElement colorOption;
 	
 	@FindBy(xpath="//button[text()='Brand']")
@@ -38,7 +38,7 @@ public class ProductPage {
 	@FindBy(xpath="//label[contains(text(),'Monte Carlo')]")
 	private WebElement brandOption;
 	
-	@FindBy(xpath="//label[contains(text(),'Rock.it') or input[id='filter.p.m.custom.brand-3']]")
+	@FindBy(css = "input[value='Rock.it']")
 	private WebElement rockItBrandOption;
 	
 	@FindBy(xpath="//button[text()='Availability']")
@@ -56,7 +56,7 @@ public class ProductPage {
 	@FindBy(xpath="//product-item[contains(@class,'product-item')]//div[@class='product-item__info  ']//div[@class='title-wish']")
 	private WebElement firstProduct;
 	
-	@FindBy(xpath="(//product-item[contains(@class,'product-item')]//div[@class='product-item__info  ']//div[@class='title-wish'])[3]")
+	@FindBy(xpath="(//div[@class='title-wish'])[3]") //(//div[@class='product-item__info  ']//div[@class='title-wish'])[3]/a
 	private WebElement fullSleeveThirdProduct;
 	
 	@FindBy(css = "input[id='filter.v.price.gte']")
@@ -116,14 +116,22 @@ public class ProductPage {
 		colorOption.click();
 	}
 	
+	
 	public void clickBrand() {
 		brand.click();
 	}
-	
+
 	public void selectBrand() {
 		brandOption.click();
 	}
 	
+	
+	public WebElement getRockItBrandOption() {
+		return rockItBrandOption;
+	}
+
+
+
 	public void selectRockItBrandOption() {
 		rockItBrandOption.click();
 	}
@@ -148,6 +156,13 @@ public class ProductPage {
 		firstProduct.click();
 	}
 	
+	
+	public WebElement getFullSleeveThirdProduct() {
+		return fullSleeveThirdProduct;
+	}
+
+
+
 	public void clickFullSleeveThirdProduct() {
 		fullSleeveThirdProduct.click();
 	}

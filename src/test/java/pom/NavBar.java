@@ -38,6 +38,10 @@ public class NavBar {
 		return homeFurnishing;
 	}
 	
+	public WebElement getAcComforter() {
+		return acComforter;
+	}
+
 	public void clicAcComforter() {
 		acComforter.click();
 	}

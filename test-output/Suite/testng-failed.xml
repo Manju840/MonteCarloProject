@@ -10,6 +10,13 @@
           <include name="opeApp"/>
         </methods>
       </class> <!-- testlibraries.TC_03_VerifyPincode -->
+      <class name="testlibraries.TC_04_InitiateCheckout">
+        <methods>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+          <include name="tc_04_initiateCheckout"/>
+        </methods>
+      </class> <!-- testlibraries.TC_04_InitiateCheckout -->
       <class name="testlibraries.TC_01_AddingProductToCart">
         <methods>
           <include name="verifyAddToWhishlistAndCart"/>

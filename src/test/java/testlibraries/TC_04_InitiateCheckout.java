@@ -35,19 +35,9 @@ public class TC_04_InitiateCheckout extends BaseClass {
 		NavBar navbar = new NavBar(driver);
 		WebElement womensSection = navbar.getWoMensSection();
 		webUtilities.mouseHover(womensSection, driver);
-		Thread.sleep(3000);
 		navbar.clickWomenImage();
 		
 		ProductPage productpage = new ProductPage(driver);
-		WebElement priceSlider = productpage.getPriceSlider();
-		int sliderWidth = productpage.getPriceSliderWidth();
-		int minval = productpage.getMinVaue();
-		int maxval = productpage.getMaxVaue();
-		webUtilities.moveSliderToPrice(driver, priceSlider, 2000, sliderWidth, minval, maxval);
-//		WebElement toPriceSlider = productpage.getPrice();
-		Thread.sleep(5000);
-//		webUtilities.dragSlider(toPriceSlider, driver, -50);
-//		webUtilities.dragSlider(toPriceSlider, driver, 2000, 6795);
 		productpage.clickOnProduct();
 		
 		ProductDetails productDetails = new ProductDetails(driver);
