@@ -13,7 +13,7 @@ public class ProductDetails {
 	@FindBy(xpath=" //product-meta/h1")
 	private WebElement wishListedItemTitle;
 	
-	@FindBy(xpath="(//div[contains(@class,'block-swatch is-disabled')]/label)[3]")
+	@FindBy(xpath="(//div[contains(@class,'block-swatch')]/label)[3]")
 	private WebElement productDetailSize;
 	
 	@FindBy(xpath="//div[contains(@class,'product-form__quantity')]")
@@ -30,6 +30,9 @@ public class ProductDetails {
 	
 	@FindBy(xpath = "//div[@class='flits-tingle-modal-popup-header']//p[contains(@class,'popup-header-title')]")
 	private WebElement whatsEmailPopup;
+	
+	@FindBy(id = "AddToCart")
+	private WebElement addToCartButton;
 
 	@FindBy(id="pincode")
 	private WebElement pincodeTextBox;
@@ -83,6 +86,10 @@ public class ProductDetails {
 	}
 	public WebElement getWhatsEmailPopup() {
 		return whatsEmailPopup;
+	}
+	
+	public void clickAddToCart() {
+		addToCartButton.click();
 	}
 	
 	

@@ -13,7 +13,7 @@ public class NavBar {
 	@FindBy(xpath="//li[@class='linklist__item']/a[text()='AC Comforter']")
 	private WebElement acComforter;
 	
-	@FindBy(xpath = "//span[text()='Cart']")
+	@FindBy(css = "a[aria-controls='mini-cart']")
 	private WebElement cartButton;
 	
 	@FindBy(xpath="//li[@data-item-title='MEN']/a")
@@ -27,6 +27,9 @@ public class NavBar {
 	
 	@FindBy(xpath="(//div[contains(@class,'mega-menu__images-wrapper')]//a[contains(@class,'mega-menu__image-push')])[2]")
 	private WebElement womenImage;
+	
+	@FindBy(xpath="(//a[contains(@class,'header')])[11]")
+	private WebElement search;
 	
 	
 	
@@ -68,5 +71,10 @@ public class NavBar {
 	
 	public void clickWomenImage() {
 		womenImage.click();
+	}
+	
+	public void clickSearchBar()
+	{
+		search.click();
 	}
 }

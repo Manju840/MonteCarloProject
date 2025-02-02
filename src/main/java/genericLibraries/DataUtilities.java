@@ -23,11 +23,11 @@ public class DataUtilities {
 		return wb.getSheet(sheetName).getRow(rowNumber).getCell(cellNumber).getStringCellValue();
 	}
 	
-	public String readDataFromPropertyFile(String key) throws FileNotFoundException, IOException {
-		Properties property = new Properties();
-		property.load(new FileInputStream("./montecarlodata.properties"));
-		return property.getProperty(key);
-		
-	}
+//	public String readDataFromPropertyFile(String key) throws FileNotFoundException, IOException {
+//		Properties property = new Properties();
+//		property.load(new FileInputStream("./montecarlodata.properties"));
+//		return property.getProperty(key);
+//		
+//	}
 
 }

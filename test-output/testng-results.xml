@@ -1,109 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-02T01:51:02 IST" name="Suite" finished-at="2025-02-02T01:54:25 IST" duration-ms="202467">
+  <suite started-at="2025-02-02T23:40:11 IST" name="Failed suite [Suite]" finished-at="2025-02-02T23:40:41 IST" duration-ms="30008">
     <groups>
     </groups>
-    <test started-at="2025-02-02T01:51:02 IST" name="Test" finished-at="2025-02-02T01:54:25 IST" duration-ms="202467">
+    <test started-at="2025-02-02T23:40:11 IST" name="Test(failed)" finished-at="2025-02-02T23:40:41 IST" duration-ms="30008">
       <class name="testlibraries.TC_01_AddingProductToCart">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@753432a2]" started-at="2025-02-02T01:51:02 IST" name="opeApp" finished-at="2025-02-02T01:51:14 IST" duration-ms="11830" status="PASS">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@fc258b1]" started-at="2025-02-02T23:40:11 IST" name="opeApp" finished-at="2025-02-02T23:40:21 IST" duration-ms="9440" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- opeApp -->
-        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@753432a2]" started-at="2025-02-02T01:51:14 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-02T01:51:31 IST" duration-ms="16602" status="PASS">
+        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@fc258b1]" started-at="2025-02-02T23:40:21 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-02T23:40:39 IST" duration-ms="18465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddToWhishlistAndCart -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@753432a2]" started-at="2025-02-02T01:51:31 IST" name="closeApp" finished-at="2025-02-02T01:51:33 IST" duration-ms="2286" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@fc258b1]" started-at="2025-02-02T23:40:39 IST" name="closeApp" finished-at="2025-02-02T23:40:41 IST" duration-ms="2077" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- testlibraries.TC_01_AddingProductToCart -->
-      <class name="testlibraries.TC_07_DeleteAddress">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_07_DeleteAddress@7c1e2a2d]" started-at="2025-02-02T01:53:37 IST" name="opeApp" finished-at="2025-02-02T01:53:48 IST" duration-ms="11109" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- opeApp -->
-        <test-method signature="tc_07_deleteAdd()[pri:0, instance:testlibraries.TC_07_DeleteAddress@7c1e2a2d]" started-at="2025-02-02T01:53:48 IST" name="tc_07_deleteAdd" finished-at="2025-02-02T01:53:58 IST" duration-ms="10471" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc_07_deleteAdd -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_07_DeleteAddress@7c1e2a2d]" started-at="2025-02-02T01:53:58 IST" name="closeApp" finished-at="2025-02-02T01:54:01 IST" duration-ms="2241" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- testlibraries.TC_07_DeleteAddress -->
-      <class name="testlibraries.TC_05_ManufactureAddress">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@ec2cc4]" started-at="2025-02-02T01:52:35 IST" name="opeApp" finished-at="2025-02-02T01:52:48 IST" duration-ms="12210" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- opeApp -->
-        <test-method signature="tc_05_ManufactureAdd()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@ec2cc4]" started-at="2025-02-02T01:52:48 IST" name="tc_05_ManufactureAdd" finished-at="2025-02-02T01:53:06 IST" duration-ms="18211" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc_05_ManufactureAdd -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@ec2cc4]" started-at="2025-02-02T01:53:06 IST" name="closeApp" finished-at="2025-02-02T01:53:08 IST" duration-ms="2324" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- testlibraries.TC_05_ManufactureAddress -->
-      <class name="testlibraries.TC_08_ResetFilterAddToWishlist">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@333dd51e]" started-at="2025-02-02T01:54:01 IST" name="opeApp" finished-at="2025-02-02T01:54:12 IST" duration-ms="11079" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- opeApp -->
-        <test-method signature="tc_08_resetFilter()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@333dd51e]" started-at="2025-02-02T01:54:12 IST" name="tc_08_resetFilter" finished-at="2025-02-02T01:54:22 IST" duration-ms="10399" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc_08_resetFilter -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@333dd51e]" started-at="2025-02-02T01:54:22 IST" name="closeApp" finished-at="2025-02-02T01:54:25 IST" duration-ms="2484" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- testlibraries.TC_08_ResetFilterAddToWishlist -->
-      <class name="testlibraries.TC_04_InitiateCheckout">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@4097cac]" started-at="2025-02-02T01:52:04 IST" name="opeApp" finished-at="2025-02-02T01:52:17 IST" duration-ms="12875" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- opeApp -->
-        <test-method signature="tc_04_initiateCheckout()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@4097cac]" started-at="2025-02-02T01:52:17 IST" name="tc_04_initiateCheckout" finished-at="2025-02-02T01:52:33 IST" duration-ms="16282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc_04_initiateCheckout -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@4097cac]" started-at="2025-02-02T01:52:33 IST" name="closeApp" finished-at="2025-02-02T01:52:35 IST" duration-ms="2511" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- testlibraries.TC_04_InitiateCheckout -->
-      <class name="testlibraries.TC_06_addAddress">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_06_addAddress@2a5b3fee]" started-at="2025-02-02T01:53:08 IST" name="opeApp" finished-at="2025-02-02T01:53:21 IST" duration-ms="12274" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- opeApp -->
-        <test-method signature="tc_06_addingAddress()[pri:0, instance:testlibraries.TC_06_addAddress@2a5b3fee]" started-at="2025-02-02T01:53:21 IST" name="tc_06_addingAddress" finished-at="2025-02-02T01:53:35 IST" duration-ms="14049" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc_06_addingAddress -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_06_addAddress@2a5b3fee]" started-at="2025-02-02T01:53:35 IST" name="closeApp" finished-at="2025-02-02T01:53:37 IST" duration-ms="2272" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- testlibraries.TC_06_addAddress -->
-      <class name="testlibraries.TC_03_VerifyPincode">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_03_VerifyPincode@ccb4b1b]" started-at="2025-02-02T01:51:33 IST" name="opeApp" finished-at="2025-02-02T01:51:45 IST" duration-ms="12013" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- opeApp -->
-        <test-method signature="tc_03_VerifyPincode()[pri:0, instance:testlibraries.TC_03_VerifyPincode@ccb4b1b]" started-at="2025-02-02T01:51:45 IST" name="tc_03_VerifyPincode" finished-at="2025-02-02T01:52:01 IST" duration-ms="16438" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tc_03_VerifyPincode -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_03_VerifyPincode@ccb4b1b]" started-at="2025-02-02T01:52:01 IST" name="closeApp" finished-at="2025-02-02T01:52:04 IST" duration-ms="2437" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeApp -->
-      </class> <!-- testlibraries.TC_03_VerifyPincode -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Test(failed) -->
+  </suite> <!-- Failed suite [Suite] -->
 </testng-results>

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testlibraries.TC_01_AddingProductToCart">
+      <class name="testlibraries.TC_03_VerifyPincode">
         <methods>
-          <include name="verifyAddToWhishlistAndCart"/>
+          <include name="tc_03_VerifyPincode"/>
           <include name="closeApp"/>
           <include name="opeApp"/>
         </methods>
-      </class> <!-- testlibraries.TC_01_AddingProductToCart -->
+      </class> <!-- testlibraries.TC_03_VerifyPincode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

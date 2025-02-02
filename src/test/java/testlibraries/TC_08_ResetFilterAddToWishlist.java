@@ -26,13 +26,13 @@ public class TC_08_ResetFilterAddToWishlist extends BaseClass {
 		collectionsPage.clickonStole();
 		
 		ProductPage productPage = new ProductPage(driver);
-		productPage.sendKeysFromPriceRange(dataUtilities.readDataFromPropertyFile("fromPrice0"));
+		productPage.sendKeysFromPriceRange(dataUtilities.readingDataFromProperty("fromPrice0"));
 		
-		productPage.sendKeysToPriceRange(dataUtilities.readDataFromPropertyFile("toPrice500"));
+		productPage.sendKeysToPriceRange(dataUtilities.readingDataFromProperty("toPrice500"));
 		
 		productPage.clickClearFilter();
-		productPage.sendKeysFromPriceRange(dataUtilities.readDataFromPropertyFile("fromPrice299"));
-		productPage.sendKeysToPriceRange(dataUtilities.readDataFromPropertyFile("toPrice2000"));
+		productPage.sendKeysFromPriceRange(dataUtilities.readingDataFromProperty("fromPrice299"));
+		productPage.sendKeysToPriceRange(dataUtilities.readingDataFromProperty("toPrice2000"));
 		
 		productPage.clickOnProduct();
 		
@@ -41,7 +41,7 @@ public class TC_08_ResetFilterAddToWishlist extends BaseClass {
 		
 		String emailPopupText = productDetails.getWhatsEmailPopup().getText().trim();
 		System.out.println("emailPopupText"+"\""+emailPopupText+"\"");
-		Assert.assertEquals(dataUtilities.readDataFromPropertyFile("whatsEmail"), emailPopupText);
+		Assert.assertEquals(dataUtilities.readingDataFromProperty("whatsEmail"), emailPopupText);
 		
 		Header header = new Header(driver);
 		header.clickWishListButton();

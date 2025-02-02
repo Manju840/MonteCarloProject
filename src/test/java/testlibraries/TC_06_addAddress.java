@@ -38,25 +38,25 @@ public class TC_06_addAddress extends BaseClass{
 		
 		AddressPage addressPage = new AddressPage(driver);
 		addressPage.clickAddNewAdd();
-		addressPage.enterFirstName(dataUtilities.readDataFromPropertyFile("firstName"));
-		addressPage.enterLastName(dataUtilities.readDataFromPropertyFile("lastName"));
-		addressPage.enterCompany(dataUtilities.readDataFromPropertyFile("companyName"));
-		addressPage.enterPhone(dataUtilities.readDataFromPropertyFile("phoneNum"));
-		addressPage.enterAddressOne(dataUtilities.readDataFromPropertyFile("add1"));
-		addressPage.enterAddressTwo(dataUtilities.readDataFromPropertyFile("add2"));
-		addressPage.enterCity(dataUtilities.readDataFromPropertyFile("cityName"));
-		addressPage.enterZip(dataUtilities.readDataFromPropertyFile("zipCode"));
+		addressPage.enterFirstName(dataUtilities.readingDataFromProperty("firstName"));
+		addressPage.enterLastName(dataUtilities.readingDataFromProperty("lastName"));
+		addressPage.enterCompany(dataUtilities.readingDataFromProperty("companyName"));
+		addressPage.enterPhone(dataUtilities.readingDataFromProperty("phoneNum"));
+		addressPage.enterAddressOne(dataUtilities.readingDataFromProperty("add1"));
+		addressPage.enterAddressTwo(dataUtilities.readingDataFromProperty("add2"));
+		addressPage.enterCity(dataUtilities.readingDataFromProperty("cityName"));
+		addressPage.enterZip(dataUtilities.readingDataFromProperty("zipCode"));
 		WebElement countrySelect = addressPage.getCountry();
-		webUtilities.dropDownByValue(countrySelect, dataUtilities.readDataFromPropertyFile("country"));
+		webUtilities.dropDownByValue(countrySelect, dataUtilities.readingDataFromProperty("country"));
 		WebElement state = addressPage.getAddProvinc();
 		if(state.isDisplayed()) {
 			WebElement stateSelect = addressPage.getAddProvinc();
-			webUtilities.dropDownByValue(stateSelect, dataUtilities.readDataFromPropertyFile("state"));
+			webUtilities.dropDownByValue(stateSelect, dataUtilities.readingDataFromProperty("state"));
 		}
 		
 		addressPage.clickSubmitButton();
 		String latestAddress = addressPage.getLastAddress();
-		Assert.assertEquals(dataUtilities.readDataFromPropertyFile("adressWithState"), latestAddress);
+		Assert.assertEquals(dataUtilities.readingDataFromProperty("adressWithState"), latestAddress);
 		
 	}
 	

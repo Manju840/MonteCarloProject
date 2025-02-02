@@ -3,6 +3,7 @@ package testlibraries;
 import java.io.IOException;
 
 import org.apache.poi.EncryptedDocumentException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -42,12 +43,23 @@ public class TC_03_VerifyPincode extends BaseClass {
 	ProductPage productpage = new ProductPage(driver);
 	productpage.clickSize();
 	productpage.selectSIze_38_M();
+	webUtilities.waitForElementToBeClickable(productpage.getBrand());
 	productpage.clickBrand();
-	webUtilities.waitForElementToBeClickable(productpage.getRockItBrandOption());
+	webUtilities.waitForElementToRefreshed(productpage.getRockItBrandOption());
 	productpage.selectRockItBrandOption();
 	productpage.clickSleeve();
+	webUtilities.waitForElementToBeClickable(productpage.getFullSleeveOption());
 	productpage.selectFullSleeve();
-	Thread.sleep(3000);
+//	Thread.sleep(3000);
+//	webUtilities.waitForElementToRefreshed(productpage.getFullSleeveThirdProduct());
+	try {
+        webUtilities.waitForElementToRefreshed(productpage.getFullSleeveThirdProduct());
+        productpage.clickFullSleeveThirdProduct();
+    } catch (StaleElementReferenceException e) {
+        // Re-locate the element and try again
+        webUtilities.waitForElementToBeClickable(productpage.getFullSleeveThirdProduct());
+        productpage.clickFullSleeveThirdProduct();
+    }
 	productpage.clickFullSleeveThirdProduct();
 	
 	ProductDetails productDetails = new ProductDetails(driver);

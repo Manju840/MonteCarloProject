@@ -50,13 +50,13 @@ public class ProductPage {
 	@FindBy(xpath="//button[text()='Sleeve']")
 	private WebElement sleeve;
 	
-	@FindBy(xpath="//label[contains(text(),'Full Sleeve') or input[@class='checkbox']]")
+	@FindBy(css="input[value='Full Sleeve']")
 	private WebElement fullSleeveOption;
 	
 	@FindBy(xpath="//product-item[contains(@class,'product-item')]//div[@class='product-item__info  ']//div[@class='title-wish']")
 	private WebElement firstProduct;
 	
-	@FindBy(xpath="(//div[@class='title-wish'])[3]") //(//div[@class='product-item__info  ']//div[@class='title-wish'])[3]/a
+	@FindBy(xpath="(//div[@class='title-wish'])[3]/a") //(//div[@class='product-item__info  ']//div[@class='title-wish'])[3]/a
 	private WebElement fullSleeveThirdProduct;
 	
 	@FindBy(css = "input[id='filter.v.price.gte']")
@@ -116,7 +116,10 @@ public class ProductPage {
 		colorOption.click();
 	}
 	
-	
+	public WebElement getBrand() {
+		return brand;
+	}
+
 	public void clickBrand() {
 		brand.click();
 	}
@@ -140,6 +143,10 @@ public class ProductPage {
 		sleeve.click();
 	}
 	
+	public WebElement getFullSleeveOption() {
+		return fullSleeveOption;
+	}
+
 	public void selectFullSleeve() {
 		fullSleeveOption.click();
 	}

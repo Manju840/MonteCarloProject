@@ -12,6 +12,12 @@ public class WhishListPage {
 	
 	@FindBy(xpath="//div[contains(@class,'flits-box')]//div//div//div//button[text()='Add to Cart']")
 	private WebElement addToCart;
+	
+	@FindBy(xpath = "//div[@class='flits-product-item-main']")
+	private WebElement firstWishElement;
+	
+	@FindBy(xpath = "(//div[@class='flits-product-item-main'])[1]//button[contains(@class,'flits-remove-product')]")
+	private WebElement closeButtonOfFirstEle;
 
 	public WhishListPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -27,6 +33,16 @@ public class WhishListPage {
 	
 	public String getTitle(WebDriver driver) {
 		return driver.getTitle();
+	}
+
+	public WebElement getFirstWishElement() {
+		return firstWishElement;
+	}
+	
+	
+	
+	public void clickFirstCloseButton() {
+		closeButtonOfFirstEle.click();
 	}
 	
 	
