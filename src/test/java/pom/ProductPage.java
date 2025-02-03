@@ -108,10 +108,15 @@ public class ProductPage {
 		size_38_M.click();
 	}
 	
+	
 	public void clickColor() {
 		color.click();
 	}
 	
+	public WebElement getColorOption() {
+		return colorOption;
+	}
+
 	public void selectColor() {
 		colorOption.click();
 	}

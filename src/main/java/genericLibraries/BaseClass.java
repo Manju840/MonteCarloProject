@@ -1,6 +1,5 @@
 package genericLibraries;
 
-import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
@@ -12,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 
-@Listeners(Listener.class)
+@Listeners(Listeners1.class)
 public class BaseClass {
 	
 	public static WebDriver driver;
@@ -20,7 +19,7 @@ public class BaseClass {
 	public WebDriverUtilities webUtilities;
 	
 	@BeforeMethod
-	public void opeApp() throws EncryptedDocumentException, IOException {
+	public void openApp() throws EncryptedDocumentException, IOException {
 		driver = new EdgeDriver();
 		driver.manage().window().maximize();
 		driver.get(dataUtilities.readingDataFromExcel("Sheet1", 1, 0));

@@ -8,6 +8,7 @@ import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import genericLibraries.BaseClass;
 import pom.AccountPage;
@@ -30,6 +31,7 @@ public class TC_01_AddingProductToCart extends BaseClass{
             Header header = new Header(driver);
             header.clickLoginSignupButton();
             logger.info("Clicked on Login/Signup button");
+            
 
             LoginPage loginPage = new LoginPage(driver);
             loginPage.enterEmail(dataUtilities.readingDataFromExcel("Sheet1", 1, 1));
@@ -62,6 +64,7 @@ public class TC_01_AddingProductToCart extends BaseClass{
             logger.debug("Selected Size");
             productpage.clickColor();
             logger.info("Clicked on Color filter");
+            webUtilities.waitForElementToBeClickable(productpage.getColorOption());
             productpage.selectColor();
             logger.debug("Selected Color");
             productpage.clickBrand();
@@ -89,10 +92,13 @@ public class TC_01_AddingProductToCart extends BaseClass{
             Assert.assertEquals(dataUtilities.readingDataFromExcel("PageTitles", 1, 0), wishListPageTitle);
             logger.info("Verified Wish List Page title");
             String wishListedText = wish.getWishListItem().getText();
-//            Assert.assertEquals(wishListingItemTitle, wishListedText);
-//            logger.info("Verified wishlisted item text");
+            System.out.println("wishListedText"+wishListedText);
+            assertEquals(wishListingItemTitle, wishListedText);
+            logger.info("Verified wishlisted item text");
             wish.clickAddToCart();
             logger.info("Clicked on Add to Cart");
+            SoftAssert.assertAll();
+            
 
         } catch (Exception e) {
             logger.error("An error occurred: ", e);

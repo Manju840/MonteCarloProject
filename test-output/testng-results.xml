@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-02T23:40:11 IST" name="Failed suite [Suite]" finished-at="2025-02-02T23:40:41 IST" duration-ms="30008">
+  <suite started-at="2025-02-03T19:29:31 IST" name="Default suite" finished-at="2025-02-03T19:33:07 IST" duration-ms="215936">
     <groups>
     </groups>
-    <test started-at="2025-02-02T23:40:11 IST" name="Test(failed)" finished-at="2025-02-02T23:40:41 IST" duration-ms="30008">
+    <test started-at="2025-02-03T19:29:31 IST" name="Default test" finished-at="2025-02-03T19:33:07 IST" duration-ms="215936">
       <class name="testlibraries.TC_01_AddingProductToCart">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@fc258b1]" started-at="2025-02-02T23:40:11 IST" name="opeApp" finished-at="2025-02-02T23:40:21 IST" duration-ms="9440" status="PASS">
+        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2ceb80a1]" started-at="2025-02-03T19:29:31 IST" name="opeApp" finished-at="2025-02-03T19:30:09 IST" duration-ms="37930" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- opeApp -->
-        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@fc258b1]" started-at="2025-02-02T23:40:21 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-02T23:40:39 IST" duration-ms="18465" status="PASS">
+        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2ceb80a1]" started-at="2025-02-03T19:30:09 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-03T19:33:05 IST" duration-ms="175464" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddToWhishlistAndCart -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@fc258b1]" started-at="2025-02-02T23:40:39 IST" name="closeApp" finished-at="2025-02-02T23:40:41 IST" duration-ms="2077" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2ceb80a1]" started-at="2025-02-03T19:33:05 IST" name="closeApp" finished-at="2025-02-03T19:33:07 IST" duration-ms="2307" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- testlibraries.TC_01_AddingProductToCart -->
-    </test> <!-- Test(failed) -->
-  </suite> <!-- Failed suite [Suite] -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

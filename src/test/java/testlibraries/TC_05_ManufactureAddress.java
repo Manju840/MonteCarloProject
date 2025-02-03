@@ -58,8 +58,6 @@ public class TC_05_ManufactureAddress extends BaseClass{
 		StorePage storePage = new StorePage(driver);
 		storePage.sendZip(pincode);
 		storePage.clickGetDirButton();
-		
-		
 	}
 	
 	public static String extractPinCode(String address) {

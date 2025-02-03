@@ -37,12 +37,7 @@ public class QuickBuyDrawer {
 			@Nullable
 			WebElement parentElement = size.findElement(By.xpath("./.."));
 			@Nullable
-			String sizeOption = parentElement.getDomAttribute("class");
-			System.out.println(sizeOption);
-//			if (!sizeOption.contains("is-Disabled")) {
-//				size.click();
-//				break;
-//			}
+			
 		}
 	}
 

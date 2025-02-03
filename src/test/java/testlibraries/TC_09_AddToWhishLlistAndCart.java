@@ -67,24 +67,6 @@ public class TC_09_AddToWhishLlistAndCart extends BaseClass{
         productDetails.clickAddToCart();
 
         logger.info("Test case tc_09_addToCart completed successfully");
-		
-		
-//		WebElement secondProduct = collections.
-//		webDriverUtilities.mouseHover(secondProduct, driver);
-//		collections.clickQuickViewBtn();
-//		Thread.sleep(3000);
-//		collections.clickAddToCartBtn();
-//		collections.clickCloseCartBtn();
-//		Thread.sleep(2000);
-//		navigationBar.clickCartButton();
-//		Thread.sleep(2000);
-//		cartdrawer.clickAddOrderNote();
-//		Thread.sleep(2000);
-//		cartdrawer.enterTextOrderNote("hello");
-//		Thread.sleep(2000);
-//		cartdrawer.clickSaveBtn();
-//		Thread.sleep(2000);
-//		cartdrawer.clickCloseCart();
 
 	}
 

@@ -3,6 +3,27 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="testlibraries.TC_02_HandTowelProductAdding">
+        <methods>
+          <include name="tc_02_addHandTowl"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_02_HandTowelProductAdding -->
+      <class name="testlibraries.TC_08_ResetFilterAddToWishlist">
+        <methods>
+          <include name="tc_08_resetFilter"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_08_ResetFilterAddToWishlist -->
+      <class name="testlibraries.TC_05_ManufactureAddress">
+        <methods>
+          <include name="tc_05_ManufactureAdd"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_05_ManufactureAddress -->
       <class name="testlibraries.TC_01_AddingProductToCart">
         <methods>
           <include name="verifyAddToWhishlistAndCart"/>
@@ -10,6 +31,48 @@
           <include name="opeApp"/>
         </methods>
       </class> <!-- testlibraries.TC_01_AddingProductToCart -->
+      <class name="testlibraries.TC_09_AddToWhishLlistAndCart">
+        <methods>
+          <include name="tc_09_addToCart"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_09_AddToWhishLlistAndCart -->
+      <class name="testlibraries.TC_07_DeleteAddress">
+        <methods>
+          <include name="tc_07_deleteAdd"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_07_DeleteAddress -->
+      <class name="testlibraries.TC_06_addAddress">
+        <methods>
+          <include name="tc_06_addingAddress"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_06_addAddress -->
+      <class name="testlibraries.TC_10_ProductVerification">
+        <methods>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+          <include name="tc_10_verifyProduct"/>
+        </methods>
+      </class> <!-- testlibraries.TC_10_ProductVerification -->
+      <class name="testlibraries.TC_04_InitiateCheckout">
+        <methods>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+          <include name="tc_04_initiateCheckout"/>
+        </methods>
+      </class> <!-- testlibraries.TC_04_InitiateCheckout -->
+      <class name="testlibraries.TC_03_VerifyPincode">
+        <methods>
+          <include name="tc_03_VerifyPincode"/>
+          <include name="closeApp"/>
+          <include name="opeApp"/>
+        </methods>
+      </class> <!-- testlibraries.TC_03_VerifyPincode -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

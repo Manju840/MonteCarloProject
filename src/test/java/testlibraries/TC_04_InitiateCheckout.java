@@ -26,43 +26,7 @@ public class TC_04_InitiateCheckout extends BaseClass {
 	
 	@Test
 	public void tc_04_initiateCheckout() throws EncryptedDocumentException, IOException, InterruptedException {
-//		Header header = new Header(driver);
-//		header.clickLoginSignupButton();
-//		
-//		LoginPage loginPage = new LoginPage(driver);
-//		loginPage.enterEmail(dataUtilities.readingDataFromExcel("Sheet1", 1, 1));
-//		loginPage.enterPassword(dataUtilities.readingDataFromExcel("Sheet1", 1, 2));
-//		loginPage.clickLogin();
-//		
-//		AccountPage accPage = new AccountPage(driver);
-//		String AccountPageTitile = accPage.getTitle(driver);
-//		
-//		Assert.assertEquals(dataUtilities.readingDataFromExcel("PageTitles", 1, 1), AccountPageTitile );
-//		
-//		NavBar navBar = new NavBar(driver);
-//		navBar.clickSearchBar();
-//		
-//		SearchDrawer searchDrawer = new SearchDrawer(driver);
-//		searchDrawer.enterSearchDrawer("women hooded jackets");
-//		
-//		searchDrawer.clickViewAllResultsBtn();
-//		SearchedProductsPage searchedPrdouPage = new SearchedProductsPage(driver);
-//		webUtilities.waitForElementToBeVisible(searchedPrdouPage.selectProduct(1)).click();
-//		
-//		ProductPage productpage = new ProductPage(driver);
-//		
-//		ProductDetails productDetails = new ProductDetails(driver);
-//		productDetails.clickProductDetailSize();
-//		
-//		if(productDetails.getQuantity().isDisplayed()) {
-//			productDetails.clickPlus();
-//		}
-//		
-//		productDetails.clickAddToCart();
-//		CartDrawer drawer = new CartDrawer(driver);
-//		drawer.clickInitiateCheckoutBtn();
-		
-		
+
 		logger.info("Test Case TC_04_InitiateCheckout started");
 
         Header header = new Header(driver);

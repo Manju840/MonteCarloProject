@@ -50,13 +50,10 @@ public class TC_03_VerifyPincode extends BaseClass {
 	productpage.clickSleeve();
 	webUtilities.waitForElementToBeClickable(productpage.getFullSleeveOption());
 	productpage.selectFullSleeve();
-//	Thread.sleep(3000);
-//	webUtilities.waitForElementToRefreshed(productpage.getFullSleeveThirdProduct());
 	try {
         webUtilities.waitForElementToRefreshed(productpage.getFullSleeveThirdProduct());
         productpage.clickFullSleeveThirdProduct();
     } catch (StaleElementReferenceException e) {
-        // Re-locate the element and try again
         webUtilities.waitForElementToBeClickable(productpage.getFullSleeveThirdProduct());
         productpage.clickFullSleeveThirdProduct();
     }
