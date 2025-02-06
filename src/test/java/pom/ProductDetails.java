@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import genericLibraries.WebDriverUtilities;
+
 public class ProductDetails {
 
 	@FindBy(xpath="//div[@class='product_wishlist']//a")
@@ -70,7 +72,8 @@ public class ProductDetails {
 	}
 	
 	
-	public String getManFacAddress() {
+	public String getManFacAddress(WebDriverUtilities webUtilities) {
+		webUtilities.waitForElementToBeVisible(manFacAddress);
 		return manFacAddress.getText();
 	}
 	public void enterPincode(String pinCode) {

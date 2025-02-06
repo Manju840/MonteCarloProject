@@ -36,7 +36,7 @@ public class QuickBuyDrawer {
 		for (WebElement size : allSizes) {
 			@Nullable
 			WebElement parentElement = size.findElement(By.xpath("./.."));
-			@Nullable
+			
 			
 		}
 	}

@@ -1,4 +1,4 @@
-package testlibraries;
+package testscripts;
 
 import java.io.IOException;
 
@@ -22,6 +22,7 @@ public class TC_10_ProductVerification extends BaseClass{
 	@Test
 	public void tc_10_verifyProduct() throws InterruptedException, EncryptedDocumentException, IOException {
 		
+		logger.info("Verify product started");
 		Header header = new Header(driver);
 		logger.info("Clicking on Login/Signup button");
         header.clickLoginSignupButton();
@@ -41,27 +42,33 @@ public class TC_10_ProductVerification extends BaseClass{
 
 
 		AccountPage accountPage = new AccountPage(driver);
-
+		logger.info("clicking on montecarlo logo");
 		header.clickMonteCarloLogo();
 
 		MonteCarloPage monteCarloPage = new MonteCarloPage(driver);
 		String monteCarloPageTitle = monteCarloPage.getMonteCarloTitle(driver);
+		logger.info("verifying the montecarlo page ");
 		Assert.assertEquals(monteCarloPageTitle, dataUtilities.readingDataFromProperty("MonteLogoPageTitle"));
-
+		logger.info("scrolling to shop trends");
 		webUtilities.scrolltoEle(monteCarloPage.getShopTrendsText(), driver);
+		logger.info("clicking on new arrivals");
 		monteCarloPage.clickNewArrival();
 		webUtilities.waitForElementToBeVisible(monteCarloPage.getFeaturedCollDiv());
 		webUtilities.mouseHover(monteCarloPage.getFeaturedCollDiv(), driver);
-		
+		logger.info("clicking on arrow");
 		monteCarloPage.clickNextArrow();
 		webUtilities.waitForElementToBeVisible(monteCarloPage.getGetNewArrivalProdElement());
 		webUtilities.mouseHover(monteCarloPage.getGetNewArrivalProdElement(), driver);
 		
 		monteCarloPage.hoverAndClickNewArrivalProduct(6, driver, webUtilities);
 		QuickBuyDrawer quickBuyDrawer = new QuickBuyDrawer(driver);
+		logger.info("selecting the size");
 		quickBuyDrawer.selectAnySize();
+		logger.info("increase count");
 		quickBuyDrawer.clickIncreaseCountBtn();
+		logger.info("clicking view details");
 		quickBuyDrawer.clickViewDetailsBtn();
+		logger.info("verify product completed");
 	}
 
 }

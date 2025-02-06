@@ -1,4 +1,4 @@
-package testlibraries;
+package testscripts;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -21,7 +21,7 @@ import pom.ProductDetails;
 
 public class TC_09_AddToWhishLlistAndCart extends BaseClass{
 	
-	static Logger logger = LogManager.getLogger(TC_01_AddingProductToCart.class);
+	static Logger logger = LogManager.getLogger(TC_09_AddToWhishLlistAndCart.class);
 	
 	@Test
 	public void tc_09_addToCart() throws EncryptedDocumentException, IOException, InterruptedException {

@@ -8,11 +8,67 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">215,936</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">1,685,177</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testlibraries.TC_01_AddingProductToCart</td><td><a href="#m0">verifyAddToWhishlistAndCart</a></td><td rowspan="1">1738591209734</td><td rowspan="1">175464</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testlibraries.TC_01_AddingProductToCart</td><td><a href="#m0">verifyAddToWhishlistAndCart</a></td><td rowspan="1">1738749235265</td><td rowspan="1">70181</td></tr><tr class="failedodd"><td rowspan="1">testlibraries.TC_03_VerifyPincode</td><td><a href="#m1">tc_03_VerifyPincode</a></td><td rowspan="1">1738749517641</td><td rowspan="1">112726</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testlibraries.TC_02_HandTowelProductAdding</td><td><a href="#m2">tc_02_addHandTowl</a></td><td rowspan="1">1738749346455</td><td rowspan="1">131054</td></tr><tr class="passedodd"><td rowspan="1">testlibraries.TC_04_InitiateCheckout</td><td><a href="#m3">tc_04_initiateCheckout</a></td><td rowspan="1">1738749639431</td><td rowspan="1">199853</td></tr><tr class="passedeven"><td rowspan="1">testlibraries.TC_05_ManufactureAddress</td><td><a href="#m4">tc_05_ManufactureAdd</a></td><td rowspan="1">1738749879803</td><td rowspan="1">167613</td></tr><tr class="passedodd"><td rowspan="1">testlibraries.TC_06_addAddress</td><td><a href="#m5">tc_06_addingAddress</a></td><td rowspan="1">1738750088539</td><td rowspan="1">132541</td></tr><tr class="passedeven"><td rowspan="1">testlibraries.TC_07_DeleteAddress</td><td><a href="#m6">tc_07_deleteAdd</a></td><td rowspan="1">1738750261791</td><td rowspan="1">131314</td></tr><tr class="passedodd"><td rowspan="1">testlibraries.TC_08_ResetFilterAddToWishlist</td><td><a href="#m7">tc_08_resetFilter</a></td><td rowspan="1">1738750434224</td><td rowspan="1">129844</td></tr><tr class="passedeven"><td rowspan="1">testlibraries.TC_09_AddToWhishLlistAndCart</td><td><a href="#m8">tc_09_addToCart</a></td><td rowspan="1">1738750605096</td><td rowspan="1">73364</td></tr><tr class="passedodd"><td rowspan="1">testlibraries.TC_10_ProductVerification</td><td><a href="#m9">tc_10_verifyProduct</a></td><td rowspan="1">1738750719773</td><td rowspan="1">158434</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">testlibraries.TC_01_AddingProductToCart#verifyAddToWhishlistAndCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">testlibraries.TC_01_AddingProductToCart#verifyAddToWhishlistAndCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=132.0.2957.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [362b4b2e9384d87485d6a5bea31588bc, clickElement {id=f.92267386CB33FD4A05395125E81DCD4A.d.37BCDAF9AC3C989CB883AC5E3B0C3BFC.e.297}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.140, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54274}, msedge: {msedgedriverVersion: 132.0.2957.140 (a81e27b375d..., userDataDir: C:\Users\ma114113\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54274/devtoo..., se:cdpVersion: 132.0.2957.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (362b4b2e9384d87485d6a5bea31588bc)] -&gt; xpath: //div[contains(@class,&apos;color-swatch&apos;)]/div/label]
+Session ID: 362b4b2e9384d87485d6a5bea31588bc
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+	at pom.ProductPage.selectColor(ProductPage.java:111)
+	at testlibraries.TC_01_AddingProductToCart.verifyAddToWhishlistAndCart(TC_01_AddingProductToCart.java:64)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testlibraries.TC_03_VerifyPincode#tc_03_VerifyPincode</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=132.0.2957.140)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.5&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b1d744049ce5981d37c7073bc1eb173d, clickElement {id=f.D0424D97F2A267412022ABB6EC66195B.d.F895444C18B1FDD93C7057DBAB626846.e.500}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.140, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55382}, msedge: {msedgedriverVersion: 132.0.2957.140 (a81e27b375d..., userDataDir: C:\Users\ma114113\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55382/devtoo..., se:cdpVersion: 132.0.2957.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (b1d744049ce5981d37c7073bc1eb173d)] -&gt; xpath: //li[@class=&apos;linklist__item&apos;]/a[text()=&apos;Round Neck Sweaters&apos;]]
+Session ID: b1d744049ce5981d37c7073bc1eb173d
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+	at pom.NavBar.clickRoundNeckSweaters(NavBar.java:63)
+	at testlibraries.TC_03_VerifyPincode.tc_03_VerifyPincode(TC_03_VerifyPincode.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testlibraries.TC_02_HandTowelProductAdding#tc_02_addHandTowl</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">testlibraries.TC_04_InitiateCheckout#tc_04_initiateCheckout</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">testlibraries.TC_05_ManufactureAddress#tc_05_ManufactureAdd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">testlibraries.TC_06_addAddress#tc_06_addingAddress</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">testlibraries.TC_07_DeleteAddress#tc_07_deleteAdd</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">testlibraries.TC_08_ResetFilterAddToWishlist#tc_08_resetFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">testlibraries.TC_09_AddToWhishLlistAndCart#tc_09_addToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">testlibraries.TC_10_ProductVerification#tc_10_verifyProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

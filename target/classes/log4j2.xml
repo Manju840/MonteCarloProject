@@ -19,7 +19,7 @@
     </Root>
     
     
-    <Logger name="com.javalog" level="debug">
+    <Logger name="testlibraries" level="debug">
       <AppenderRef ref="CONSOLE"/>
     </Logger>
   </Loggers>

@@ -6,8 +6,8 @@
       <class name="testlibraries.TC_01_AddingProductToCart">
         <methods>
           <include name="verifyAddToWhishlistAndCart"/>
+          <include name="openApp"/>
           <include name="closeApp"/>
-          <include name="opeApp"/>
         </methods>
       </class> <!-- testlibraries.TC_01_AddingProductToCart -->
     </classes>

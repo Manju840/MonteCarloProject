@@ -1,4 +1,4 @@
-package testlibraries;
+package testscripts;
 
 import java.io.IOException;
 
@@ -22,7 +22,7 @@ import pom.SearchedProductsPage;
 
 public class TC_04_InitiateCheckout extends BaseClass {
 	
-	static Logger logger = LogManager.getLogger(TC_01_AddingProductToCart.class);
+	static Logger logger = LogManager.getLogger(TC_04_InitiateCheckout.class);
 	
 	@Test
 	public void tc_04_initiateCheckout() throws EncryptedDocumentException, IOException, InterruptedException {
@@ -58,11 +58,6 @@ public class TC_04_InitiateCheckout extends BaseClass {
         searchDrawer.clickViewAllResultsBtn();
         SearchedProductsPage searchedProdPage = new SearchedProductsPage(driver);
         logger.info("Selecting the first product from search results");
-//        webUtilities.waitForElementToBeVisible(searchedProdPage.selectProduct(1));
-//        if(searchedProdPage.selectProduct(1).isDisplayed()) {
-//        	logger.info("selected element is visible");
-//        	searchedProdPage.clicOnSelected(searchedProdPage.selectProduct(1));
-//        }
         searchedProdPage.clicOnSelected(searchedProdPage.selectProduct(1));
         ProductPage productPage = new ProductPage(driver);
         

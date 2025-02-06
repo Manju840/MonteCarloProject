@@ -22,12 +22,5 @@ public class DataUtilities {
 		Workbook wb =WorkbookFactory.create(fis);
 		return wb.getSheet(sheetName).getRow(rowNumber).getCell(cellNumber).getStringCellValue();
 	}
-	
-//	public String readDataFromPropertyFile(String key) throws FileNotFoundException, IOException {
-//		Properties property = new Properties();
-//		property.load(new FileInputStream("./montecarlodata.properties"));
-//		return property.getProperty(key);
-//		
-//	}
 
 }

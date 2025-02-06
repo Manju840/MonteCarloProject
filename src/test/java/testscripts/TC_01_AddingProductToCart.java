@@ -1,10 +1,7 @@
-package testlibraries;
-
-import java.io.IOException;
+package testscripts;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.poi.EncryptedDocumentException;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -24,14 +21,13 @@ public class TC_01_AddingProductToCart extends BaseClass{
 	static Logger logger = LogManager.getLogger(TC_01_AddingProductToCart.class);
 
 	@Test
-	public void verifyAddToWhishlistAndCart() throws EncryptedDocumentException, IOException {
+	public void verifyAddToWhishlistAndCart() throws Exception {
 		logger.info("Test case verifyAddToWhishlistAndCart started");
 
         try {
             Header header = new Header(driver);
             header.clickLoginSignupButton();
             logger.info("Clicked on Login/Signup button");
-            
 
             LoginPage loginPage = new LoginPage(driver);
             loginPage.enterEmail(dataUtilities.readingDataFromExcel("Sheet1", 1, 1));
@@ -64,7 +60,7 @@ public class TC_01_AddingProductToCart extends BaseClass{
             logger.debug("Selected Size");
             productpage.clickColor();
             logger.info("Clicked on Color filter");
-            webUtilities.waitForElementToBeClickable(productpage.getColorOption());
+            webUtilities.waitForElementToBeVisible(productpage.getColorOption());
             productpage.selectColor();
             logger.debug("Selected Color");
             productpage.clickBrand();
@@ -73,9 +69,14 @@ public class TC_01_AddingProductToCart extends BaseClass{
             logger.debug("Selected Brand");
             productpage.clickAvailability();
             logger.info("Clicked on Availability filter");
-            productpage.selectAvailability();
+            productpage.selectAvailability(webUtilities);
             logger.debug("Selected Availability");
-            productpage.clickOnProduct();
+            try {
+            productpage.clickOnProduct(webUtilities);
+            }catch(Exception e) {
+            	productpage.clickOnProduct(webUtilities);
+
+            }
             logger.info("Clicked on a product");
 
             ProductDetails productDetails = new ProductDetails(driver);
@@ -92,12 +93,13 @@ public class TC_01_AddingProductToCart extends BaseClass{
             Assert.assertEquals(dataUtilities.readingDataFromExcel("PageTitles", 1, 0), wishListPageTitle);
             logger.info("Verified Wish List Page title");
             String wishListedText = wish.getWishListItem().getText();
-            System.out.println("wishListedText"+wishListedText);
-            assertEquals(wishListingItemTitle, wishListedText);
+            logger.debug("wishListedText"+wishListedText);
+            SoftAssert sAssert = new SoftAssert();
+            sAssert.assertEquals(wishListingItemTitle, wishListedText);
             logger.info("Verified wishlisted item text");
             wish.clickAddToCart();
             logger.info("Clicked on Add to Cart");
-            SoftAssert.assertAll();
+            sAssert.assertAll();
             
 
         } catch (Exception e) {

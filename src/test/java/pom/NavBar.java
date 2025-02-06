@@ -56,7 +56,9 @@ public class NavBar {
 	public WebElement getMensSection() {
 		return mens;
 	}
-	
+	public void clickMensSection() {
+		mens.click();
+	}
 	public void clickRoundNeckSweaters() {
 		roundNeckSweaters.click();
 	}

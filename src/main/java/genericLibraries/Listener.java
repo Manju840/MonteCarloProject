@@ -16,7 +16,7 @@ import com.aventstack.extentreports.reporter.ExtentReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class Listeners1 implements ITestListener {
+public class Listener implements ITestListener {
 	
 	public ExtentReports reports;
 	private ExtentTest test;
@@ -39,7 +39,7 @@ public class Listeners1 implements ITestListener {
 		TakesScreenshot takesScreenShot = (TakesScreenshot)BaseClass.driver;
 		File src = takesScreenShot.getScreenshotAs(OutputType.FILE);
 	
-		File dest = new File(AutoConstant.photoPath+"failed"+".png");
+		File dest = new File(AutoConstant.photoPath+result.getMethod().getMethodName()+".png");
 		
 		try {
 			FileUtils.copyFile(src, dest);
@@ -58,13 +58,13 @@ public class Listeners1 implements ITestListener {
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		// TODO Auto-generated method stub
+		
 		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
 	@Override
 	public void onTestFailedWithTimeout(ITestResult result) {
-		// TODO Auto-generated method stub
+		
 		ITestListener.super.onTestFailedWithTimeout(result);
 	}
 

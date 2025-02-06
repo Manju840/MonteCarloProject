@@ -2,11 +2,14 @@ package pom;
 
 import java.sql.Driver;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import genericLibraries.WebDriverUtilities;
 
 public class ProductPage {
 	
@@ -56,7 +59,7 @@ public class ProductPage {
 	@FindBy(xpath="//product-item[contains(@class,'product-item')]//div[@class='product-item__info  ']//div[@class='title-wish']")
 	private WebElement firstProduct;
 	
-	@FindBy(xpath="(//div[@class='title-wish'])[3]/a") //(//div[@class='product-item__info  ']//div[@class='title-wish'])[3]/a
+	@FindBy(xpath="(//div[@class='title-wish'])[3]/a")
 	private WebElement fullSleeveThirdProduct;
 	
 	@FindBy(css = "input[id='filter.v.price.gte']")
@@ -68,15 +71,12 @@ public class ProductPage {
 	@FindBy(xpath = "//div[@class='button-wrapper']//a[@data-action='clear-filters']")
 	private WebElement clearFilter;
 	
+	@FindBy(xpath = "//product-list[contains(@class,'product-facet__product-list')]")
+	private WebElement productListDiv;
+	
 	public ProductPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-	
-	
-	
-//	public WebElement getPrice() {
-//		return price;
-//	}
 
 	public int getPriceSliderWidth() {
 		return priceSlider.getSize().getWidth();
@@ -84,16 +84,6 @@ public class ProductPage {
 	
 	public WebElement getPriceSlider() {
 		return priceSlider;
-	}
-
-
-
-	public int getMinVaue() {
-		return Integer.parseInt(priceSlider.getAttribute("min"));
-	}
-	
-	public int getMaxVaue() {
-		return Integer.parseInt(priceSlider.getAttribute("max"));
 	}
 
 	public void clickSize() {
@@ -160,11 +150,25 @@ public class ProductPage {
 		availability.click();
 	}
 	
-	public void selectAvailability() {
+	public void selectAvailability(WebDriverUtilities web) {
+		web.waitForElementToBeClickable(instockOption);
 		instockOption.click();
 	}
 	
-	public void clickOnProduct() {
+	public void clickOnProduct(int index, WebDriverUtilities webDriverUtilities, WebDriver driver) {
+		
+		webDriverUtilities.waitForElementToRefreshedVisible(productListDiv);
+		WebElement product = driver
+				.findElement(By.xpath("(//div[@id='facet-main']//product-item[@class='product-item  hhh Byee'])["
+						+ index + "]//div[@class='title-wish']/a"));
+		webDriverUtilities.scrolltoEle(product, driver);
+		webDriverUtilities.waitElementClcik(product, driver);
+		product.click();
+	}
+	
+	public void clickOnProduct(WebDriverUtilities web) {
+		web.waitForElementToRefreshedVisible(productListDiv);
+		web.waitForElementToBeClickable(firstProduct);
 		firstProduct.click();
 	}
 	
@@ -181,12 +185,10 @@ public class ProductPage {
 	
 	public void sendKeysFromPriceRange(String fromprice) {
 		fromPrice.sendKeys(fromprice);
-//		fromPrice.sendKeys(Keys.ENTER);
 	}
 	
 	public void sendKeysToPriceRange(String toprice) {
 		toPrice.sendKeys(toprice);
-//		fromPrice.sendKeys(Keys.ENTER);
 	}
 	
 	public void clickClearFilter() {

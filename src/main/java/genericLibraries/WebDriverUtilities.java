@@ -37,6 +37,11 @@ public class WebDriverUtilities {
 				));
 	}
 	
+	public WebElement waitForElementToRefreshedVisible(WebElement ele) {
+		return wait.until(ExpectedConditions.refreshed(
+			    ExpectedConditions.visibilityOf(ele)
+				));
+	}
 	public void mouseHover(WebElement ele, WebDriver driver) {
 		Actions action = new Actions(driver);
 		action.moveToElement(ele).perform();

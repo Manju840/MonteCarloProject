@@ -1,25 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="10" passed="8" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-02-03T19:29:31 IST" name="Default suite" finished-at="2025-02-03T19:33:07 IST" duration-ms="215936">
+  <suite started-at="2025-02-05T15:23:14 IST" name="Suite" finished-at="2025-02-05T15:51:20 IST" duration-ms="1685177">
     <groups>
     </groups>
-    <test started-at="2025-02-03T19:29:31 IST" name="Default test" finished-at="2025-02-03T19:33:07 IST" duration-ms="215936">
+    <test started-at="2025-02-05T15:23:14 IST" name="Test" finished-at="2025-02-05T15:51:20 IST" duration-ms="1685177">
       <class name="testlibraries.TC_01_AddingProductToCart">
-        <test-method is-config="true" signature="opeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2ceb80a1]" started-at="2025-02-03T19:29:31 IST" name="opeApp" finished-at="2025-02-03T19:30:09 IST" duration-ms="37930" status="PASS">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@302f7971]" started-at="2025-02-05T15:23:14 IST" name="openApp" finished-at="2025-02-05T15:23:55 IST" duration-ms="40264" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- opeApp -->
-        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2ceb80a1]" started-at="2025-02-03T19:30:09 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-03T19:33:05 IST" duration-ms="175464" status="PASS">
+        </test-method> <!-- openApp -->
+        <test-method signature="verifyAddToWhishlistAndCart()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@302f7971]" started-at="2025-02-05T15:23:55 IST" name="verifyAddToWhishlistAndCart" finished-at="2025-02-05T15:25:05 IST" duration-ms="70181" status="FAIL">
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=132.0.2957.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [362b4b2e9384d87485d6a5bea31588bc, clickElement {id=f.92267386CB33FD4A05395125E81DCD4A.d.37BCDAF9AC3C989CB883AC5E3B0C3BFC.e.297}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.140, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54274}, msedge: {msedgedriverVersion: 132.0.2957.140 (a81e27b375d..., userDataDir: C:\Users\ma114113\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54274/devtoo..., se:cdpVersion: 132.0.2957.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (362b4b2e9384d87485d6a5bea31588bc)] -> xpath: //div[contains(@class,'color-swatch')]/div/label]
+Session ID: 362b4b2e9384d87485d6a5bea31588bc]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+  (Session info: MicrosoftEdge=132.0.2957.140)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [362b4b2e9384d87485d6a5bea31588bc, clickElement {id=f.92267386CB33FD4A05395125E81DCD4A.d.37BCDAF9AC3C989CB883AC5E3B0C3BFC.e.297}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.140, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:54274}, msedge: {msedgedriverVersion: 132.0.2957.140 (a81e27b375d..., userDataDir: C:\Users\ma114113\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:54274/devtoo..., se:cdpVersion: 132.0.2957.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (362b4b2e9384d87485d6a5bea31588bc)] -> xpath: //div[contains(@class,'color-swatch')]/div/label]
+Session ID: 362b4b2e9384d87485d6a5bea31588bc
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+at pom.ProductPage.selectColor(ProductPage.java:111)
+at testlibraries.TC_01_AddingProductToCart.verifyAddToWhishlistAndCart(TC_01_AddingProductToCart.java:64)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyAddToWhishlistAndCart -->
-        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@2ceb80a1]" started-at="2025-02-03T19:33:05 IST" name="closeApp" finished-at="2025-02-03T19:33:07 IST" duration-ms="2307" status="PASS">
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_01_AddingProductToCart@302f7971]" started-at="2025-02-05T15:25:05 IST" name="closeApp" finished-at="2025-02-05T15:25:07 IST" duration-ms="1920" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeApp -->
       </class> <!-- testlibraries.TC_01_AddingProductToCart -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="testlibraries.TC_09_AddToWhishLlistAndCart">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_09_AddToWhishLlistAndCart@5b67bb7e]" started-at="2025-02-05T15:46:05 IST" name="openApp" finished-at="2025-02-05T15:46:45 IST" duration-ms="39193" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_09_addToCart()[pri:0, instance:testlibraries.TC_09_AddToWhishLlistAndCart@5b67bb7e]" started-at="2025-02-05T15:46:45 IST" name="tc_09_addToCart" finished-at="2025-02-05T15:47:58 IST" duration-ms="73364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_09_addToCart -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_09_AddToWhishLlistAndCart@5b67bb7e]" started-at="2025-02-05T15:47:58 IST" name="closeApp" finished-at="2025-02-05T15:48:00 IST" duration-ms="2041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_09_AddToWhishLlistAndCart -->
+      <class name="testlibraries.TC_07_DeleteAddress">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_07_DeleteAddress@59e32960]" started-at="2025-02-05T15:40:23 IST" name="openApp" finished-at="2025-02-05T15:41:01 IST" duration-ms="38592" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_07_deleteAdd()[pri:0, instance:testlibraries.TC_07_DeleteAddress@59e32960]" started-at="2025-02-05T15:41:01 IST" name="tc_07_deleteAdd" finished-at="2025-02-05T15:43:13 IST" duration-ms="131314" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_07_deleteAdd -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_07_DeleteAddress@59e32960]" started-at="2025-02-05T15:43:13 IST" name="closeApp" finished-at="2025-02-05T15:43:14 IST" duration-ms="1818" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_07_DeleteAddress -->
+      <class name="testlibraries.TC_05_ManufactureAddress">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@436c81a3]" started-at="2025-02-05T15:34:01 IST" name="openApp" finished-at="2025-02-05T15:34:39 IST" duration-ms="38475" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_05_ManufactureAdd()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@436c81a3]" started-at="2025-02-05T15:34:39 IST" name="tc_05_ManufactureAdd" finished-at="2025-02-05T15:37:27 IST" duration-ms="167613" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_05_ManufactureAdd -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_05_ManufactureAddress@436c81a3]" started-at="2025-02-05T15:37:27 IST" name="closeApp" finished-at="2025-02-05T15:37:29 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_05_ManufactureAddress -->
+      <class name="testlibraries.TC_10_ProductVerification">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_10_ProductVerification@609db546]" started-at="2025-02-05T15:48:00 IST" name="openApp" finished-at="2025-02-05T15:48:39 IST" duration-ms="39268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_10_verifyProduct()[pri:0, instance:testlibraries.TC_10_ProductVerification@609db546]" started-at="2025-02-05T15:48:39 IST" name="tc_10_verifyProduct" finished-at="2025-02-05T15:51:18 IST" duration-ms="158434" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_10_verifyProduct -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_10_ProductVerification@609db546]" started-at="2025-02-05T15:51:18 IST" name="closeApp" finished-at="2025-02-05T15:51:20 IST" duration-ms="1834" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_10_ProductVerification -->
+      <class name="testlibraries.TC_08_ResetFilterAddToWishlist">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@7c214cc0]" started-at="2025-02-05T15:43:14 IST" name="openApp" finished-at="2025-02-05T15:43:54 IST" duration-ms="39297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_08_resetFilter()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@7c214cc0]" started-at="2025-02-05T15:43:54 IST" name="tc_08_resetFilter" finished-at="2025-02-05T15:46:04 IST" duration-ms="129844" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_08_resetFilter -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_08_ResetFilterAddToWishlist@7c214cc0]" started-at="2025-02-05T15:46:04 IST" name="closeApp" finished-at="2025-02-05T15:46:05 IST" duration-ms="1832" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_08_ResetFilterAddToWishlist -->
+      <class name="testlibraries.TC_02_HandTowelProductAdding">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_02_HandTowelProductAdding@3148f668]" started-at="2025-02-05T15:25:07 IST" name="openApp" finished-at="2025-02-05T15:25:46 IST" duration-ms="38712" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_02_addHandTowl()[pri:0, instance:testlibraries.TC_02_HandTowelProductAdding@3148f668]" started-at="2025-02-05T15:25:46 IST" name="tc_02_addHandTowl" finished-at="2025-02-05T15:27:57 IST" duration-ms="131054" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_02_addHandTowl -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_02_HandTowelProductAdding@3148f668]" started-at="2025-02-05T15:27:57 IST" name="closeApp" finished-at="2025-02-05T15:27:59 IST" duration-ms="1837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_02_HandTowelProductAdding -->
+      <class name="testlibraries.TC_04_InitiateCheckout">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@7ceb3185]" started-at="2025-02-05T15:30:32 IST" name="openApp" finished-at="2025-02-05T15:30:39 IST" duration-ms="6804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_04_initiateCheckout()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@7ceb3185]" started-at="2025-02-05T15:30:39 IST" name="tc_04_initiateCheckout" finished-at="2025-02-05T15:33:59 IST" duration-ms="199853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_04_initiateCheckout -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_04_InitiateCheckout@7ceb3185]" started-at="2025-02-05T15:33:59 IST" name="closeApp" finished-at="2025-02-05T15:34:01 IST" duration-ms="2040" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_04_InitiateCheckout -->
+      <class name="testlibraries.TC_06_addAddress">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_06_addAddress@3561c410]" started-at="2025-02-05T15:37:29 IST" name="openApp" finished-at="2025-02-05T15:38:08 IST" duration-ms="39107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_06_addingAddress()[pri:0, instance:testlibraries.TC_06_addAddress@3561c410]" started-at="2025-02-05T15:38:08 IST" name="tc_06_addingAddress" finished-at="2025-02-05T15:40:21 IST" duration-ms="132541" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_06_addingAddress -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_06_addAddress@3561c410]" started-at="2025-02-05T15:40:21 IST" name="closeApp" finished-at="2025-02-05T15:40:23 IST" duration-ms="2115" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_06_addAddress -->
+      <class name="testlibraries.TC_03_VerifyPincode">
+        <test-method is-config="true" signature="openApp()[pri:0, instance:testlibraries.TC_03_VerifyPincode@6e005dc9]" started-at="2025-02-05T15:27:59 IST" name="openApp" finished-at="2025-02-05T15:28:37 IST" duration-ms="38291" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApp -->
+        <test-method signature="tc_03_VerifyPincode()[pri:0, instance:testlibraries.TC_03_VerifyPincode@6e005dc9]" started-at="2025-02-05T15:28:37 IST" name="tc_03_VerifyPincode" finished-at="2025-02-05T15:30:30 IST" duration-ms="112726" status="FAIL">
+          <exception class="org.openqa.selenium.ElementNotInteractableException">
+            <message>
+              <![CDATA[element not interactable
+  (Session info: MicrosoftEdge=132.0.2957.140)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b1d744049ce5981d37c7073bc1eb173d, clickElement {id=f.D0424D97F2A267412022ABB6EC66195B.d.F895444C18B1FDD93C7057DBAB626846.e.500}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.140, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55382}, msedge: {msedgedriverVersion: 132.0.2957.140 (a81e27b375d..., userDataDir: C:\Users\ma114113\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55382/devtoo..., se:cdpVersion: 132.0.2957.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (b1d744049ce5981d37c7073bc1eb173d)] -> xpath: //li[@class='linklist__item']/a[text()='Round Neck Sweaters']]
+Session ID: b1d744049ce5981d37c7073bc1eb173d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=132.0.2957.140)
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b1d744049ce5981d37c7073bc1eb173d, clickElement {id=f.D0424D97F2A267412022ABB6EC66195B.d.F895444C18B1FDD93C7057DBAB626846.e.500}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.140, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:55382}, msedge: {msedgedriverVersion: 132.0.2957.140 (a81e27b375d..., userDataDir: C:\Users\ma114113\AppData\L...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55382/devtoo..., se:cdpVersion: 132.0.2957.140, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (b1d744049ce5981d37c7073bc1eb173d)] -> xpath: //li[@class='linklist__item']/a[text()='Round Neck Sweaters']]
+Session ID: b1d744049ce5981d37c7073bc1eb173d
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at jdk.proxy2/jdk.proxy2.$Proxy29.click(Unknown Source)
+at pom.NavBar.clickRoundNeckSweaters(NavBar.java:63)
+at testlibraries.TC_03_VerifyPincode.tc_03_VerifyPincode(TC_03_VerifyPincode.java:59)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tc_03_VerifyPincode -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:testlibraries.TC_03_VerifyPincode@6e005dc9]" started-at="2025-02-05T15:30:30 IST" name="closeApp" finished-at="2025-02-05T15:30:32 IST" duration-ms="1954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- testlibraries.TC_03_VerifyPincode -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
