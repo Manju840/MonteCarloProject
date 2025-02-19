@@ -52,8 +52,6 @@ public class TC_03_VerifyPincode extends BaseClass {
 		NavBar navbar = new NavBar(driver);
 		logger.info("Clicking men's section");
 		webUtilities.mouseHover(navbar.getMensSection(), driver);
-//		navbar.clickMensSection();
-//		logger.info("Clicked men's section");
 		logger.info("Clicking round neck sweaters");
 		navbar.clickRoundNeckSweaters();
 		logger.info("Clicked round neck sweaters");
@@ -70,8 +68,6 @@ public class TC_03_VerifyPincode extends BaseClass {
 		logger.info("Clicking brand");
 		productpage.clickBrand();
 		logger.info("Clicked brand");
-//		logger.info("Waiting for RockIt brand option to be refreshed");
-//		webUtilities.waitForElementToRefreshed(productpage.getRockItBrandOption());
 		logger.info("Selecting RockIt brand option");
 		productpage.selectRockItBrandOption();
 		logger.info("Selected RockIt brand option");

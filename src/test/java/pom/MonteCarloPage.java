@@ -60,14 +60,6 @@ public class MonteCarloPage {
 		return getNewArrivalProdElement;
 	}
 
-//	public WebElement getNewArrivalquickViewButton() {
-//		return newArrivalquickViewButton;
-//	}
-//	
-//	public void clickNewArrQuickView() {
-//		newArrivalquickViewButton.click();
-//	}
-
 	public List<WebElement> getAllNewArrivalProducts() {
 		return allNewArrivalProducts;
 	}
