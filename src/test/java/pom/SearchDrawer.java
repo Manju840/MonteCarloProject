@@ -36,10 +36,9 @@ public class SearchDrawer {
 	public void clickViewAllResultsBtn() {
 		viewAllResultsBtn.click();
 	}
-	
+
 	public void clickOnProduct(WebElement ele) {
 		ele.click();
 	}
-	
-	
+
 }

@@ -9,94 +9,93 @@ import genericLibraries.WebDriverUtilities;
 
 public class ProductDetails {
 
-	@FindBy(xpath="//div[@class='product_wishlist']//a")
+	@FindBy(xpath = "//div[@class='product_wishlist']//a")
 	private WebElement wishListProduct;
-	
-	@FindBy(xpath=" //product-meta/h1")
+
+	@FindBy(xpath = " //product-meta/h1")
 	private WebElement wishListedItemTitle;
-	
-	@FindBy(xpath="(//div[contains(@class,'block-swatch')]/label)[3]")
+
+	@FindBy(xpath = "(//div[contains(@class,'block-swatch')]/label)[3]")
 	private WebElement productDetailSize;
-	
-	@FindBy(xpath="//div[contains(@class,'product-form__quantity')]")
+
+	@FindBy(xpath = "//div[contains(@class,'product-form__quantity')]")
 	private WebElement quantity;
-	
-	@FindBy(xpath="//quantity-selector[@class='quantity-selector']/button[2]")
+
+	@FindBy(xpath = "//quantity-selector[@class='quantity-selector']/button[2]")
 	private WebElement plusButton;
-	
+
 	@FindBy(xpath = "//button[contains(@class,'accordion')]")
 	private WebElement prodDetailDesc;
-	
+
 	@FindBy(xpath = "//div[@class='yash-blog-text shreyh']/h2[text()='Manufacturer Address']/following::p")
 	private WebElement manFacAddress;
-	
+
 	@FindBy(xpath = "//div[@class='flits-tingle-modal-popup-header']//p[contains(@class,'popup-header-title')]")
 	private WebElement whatsEmailPopup;
-	
+
 	@FindBy(id = "AddToCart")
 	private WebElement addToCartButton;
 
-	@FindBy(id="pincode")
+	@FindBy(id = "pincode")
 	private WebElement pincodeTextBox;
-	
-	@FindBy(id="check-pincode")
+
+	@FindBy(id = "check-pincode")
 	private WebElement checkPincodeButton;
-	
+
 	@FindBy(linkText = "Our Stores")
 	private WebElement ourStore;
-	
+
 	public ProductDetails(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
+
 	public void clickWishListProduct() {
 		wishListProduct.click();
 	}
+
 	public WebElement getWishListedItemTitle() {
 		return wishListedItemTitle;
 	}
-	
+
 	public void clickProductDetailSize() {
 		productDetailSize.click();
 	}
-	
+
 	public WebElement getQuantity() {
 		return quantity;
 	}
-	
+
 	public void clickPlus() {
 		plusButton.click();
 	}
-	
+
 	public void clickProdDesc() {
 		prodDetailDesc.click();
 	}
-	
-	
+
 	public String getManFacAddress(WebDriverUtilities webUtilities) {
 		webUtilities.waitForElementToBeVisible(manFacAddress);
 		return manFacAddress.getText();
 	}
+
 	public void enterPincode(String pinCode) {
 		pincodeTextBox.sendKeys(pinCode);
 	}
-	
+
 	public void clickCheckPincode() {
 		checkPincodeButton.click();
 	}
-	
+
 	public void clickOurStore() {
 		ourStore.click();
 	}
+
 	public WebElement getWhatsEmailPopup() {
 		return whatsEmailPopup;
 	}
-	
+
 	public void clickAddToCart() {
 		addToCartButton.click();
 	}
-	
-	
-	
-	
-	
+
 }

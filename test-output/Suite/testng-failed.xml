@@ -3,20 +3,20 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testlibraries.TC_01_AddingProductToCart">
+      <class name="testscripts.TC_01_AddingProductToCart">
         <methods>
+          <include name="openApp"/>
+          <include name="closeApp"/>
           <include name="verifyAddToWhishlistAndCart"/>
-          <include name="openApp"/>
-          <include name="closeApp"/>
         </methods>
-      </class> <!-- testlibraries.TC_01_AddingProductToCart -->
-      <class name="testlibraries.TC_03_VerifyPincode">
+      </class> <!-- testscripts.TC_01_AddingProductToCart -->
+      <class name="testscripts.TC_03_VerifyPincode">
         <methods>
-          <include name="tc_03_VerifyPincode"/>
           <include name="openApp"/>
+          <include name="tc_03_VerifyPincode"/>
           <include name="closeApp"/>
         </methods>
-      </class> <!-- testlibraries.TC_03_VerifyPincode -->
+      </class> <!-- testscripts.TC_03_VerifyPincode -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

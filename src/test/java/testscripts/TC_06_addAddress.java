@@ -18,16 +18,15 @@ import pom.AddressPage;
 import pom.Header;
 import pom.LoginPage;
 
-public class TC_06_addAddress extends BaseClass{
-	
-	
+public class TC_06_addAddress extends BaseClass {
+
 	static Logger logger = LogManager.getLogger(TC_06_addAddress.class);
 
 	@Test
 	public void tc_06_addingAddress() throws EncryptedDocumentException, IOException {
 		logger.info("Adding address started");
 		Header header = new Header(driver);
-		
+
 		logger.info("clicking login/signup button");
 		header.clickLoginSignupButton();
 		logger.info("clicked login/signup button");
@@ -38,17 +37,17 @@ public class TC_06_addAddress extends BaseClass{
 		loginPage.enterPassword(dataUtilities.readingDataFromExcel("Sheet1", 1, 2));
 		logger.info("clicking login");
 		loginPage.clickLogin();
-		
+
 		AccountPage accPage = new AccountPage(driver);
 		logger.info("getting account page title");
 		String AccountPageTitile = accPage.getTitle(driver);
 		logger.info("Verifying the account page");
-		Assert.assertEquals(dataUtilities.readingDataFromExcel("PageTitles", 1, 1), AccountPageTitile );
-		
+		Assert.assertEquals(dataUtilities.readingDataFromExcel("PageTitles", 1, 1), AccountPageTitile);
+
 		AccountPage accountPage = new AccountPage(driver);
 		logger.info("clicking addresses");
 		accountPage.clickAddresses();
-		
+
 		AddressPage addressPage = new AddressPage(driver);
 		logger.info("clicking add new addresses");
 		addressPage.clickAddNewAdd();
@@ -72,7 +71,7 @@ public class TC_06_addAddress extends BaseClass{
 		logger.info("selecting country");
 		webUtilities.dropDownByValue(countrySelect, dataUtilities.readingDataFromProperty("country"));
 		WebElement state = addressPage.getAddProvinc();
-		if(state.isDisplayed()) {
+		if (state.isDisplayed()) {
 			logger.info("selecting state");
 			WebElement stateSelect = addressPage.getAddProvinc();
 			webUtilities.dropDownByValue(stateSelect, dataUtilities.readingDataFromProperty("state"));
@@ -85,8 +84,7 @@ public class TC_06_addAddress extends BaseClass{
 		sAssert.assertEquals(dataUtilities.readingDataFromProperty("adressWithState"), latestAddress);
 		sAssert.assertAll();
 		logger.info("adding address completed");
-		
+
 	}
-	
 
 }

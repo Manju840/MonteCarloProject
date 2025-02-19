@@ -17,54 +17,55 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Listener implements ITestListener {
-	
+
 	public ExtentReports reports;
 	private ExtentTest test;
 	public static ExtentTest stest;
 
 	@Override
 	public void onTestStart(ITestResult result) {
-		
-		test=reports.createTest(result.getMethod().getMethodName());
-		stest=test;
+
+		test = reports.createTest(result.getMethod().getMethodName());
+		stest = test;
 	}
+
 	@Override
 	public void onTestSuccess(ITestResult result) {
-		test.pass(result.getMethod().getMethodName()+"Pass");
+		test.pass(result.getMethod().getMethodName() + "Pass");
 		test.pass(result.getThrowable());
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
-		TakesScreenshot takesScreenShot = (TakesScreenshot)BaseClass.driver;
+		TakesScreenshot takesScreenShot = (TakesScreenshot) BaseClass.driver;
 		File src = takesScreenShot.getScreenshotAs(OutputType.FILE);
-	
-		File dest = new File(AutoConstant.photoPath+result.getMethod().getMethodName()+".png");
-		
+
+		File dest = new File(AutoConstant.photoPath + result.getMethod().getMethodName() + ".png");
+
 		try {
 			FileUtils.copyFile(src, dest);
 		} catch (IOException e) {
-			e.printStackTrace();	
-	}
-		test.fail(result.getMethod().getMethodName()+"Fail");
+			e.printStackTrace();
+		}
+		test.fail(result.getMethod().getMethodName() + "Fail");
 		test.fail(result.getThrowable());
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
-		test.skip(result.getMethod().getMethodName()+"Skipped");
+		test.skip(result.getMethod().getMethodName() + "Skipped");
 		test.skip(result.getThrowable());
 	}
 
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
-		
+
 		ITestListener.super.onTestFailedButWithinSuccessPercentage(result);
 	}
 
 	@Override
 	public void onTestFailedWithTimeout(ITestResult result) {
-		
+
 		ITestListener.super.onTestFailedWithTimeout(result);
 	}
 
@@ -73,7 +74,7 @@ public class Listener implements ITestListener {
 		ExtentSparkReporter spark = new ExtentSparkReporter("./reports/monteCarlo.html");
 		spark.config().setTheme(Theme.STANDARD);
 		spark.config().setDocumentTitle("MonteCarlo");
-		
+
 		reports = new ExtentReports();
 		reports.attachReporter(spark);
 		reports.setSystemInfo("Username", "Manjunatha");
@@ -85,5 +86,4 @@ public class Listener implements ITestListener {
 		reports.flush();
 	}
 
-	
 }

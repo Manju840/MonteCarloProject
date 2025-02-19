@@ -28,13 +28,9 @@ public class CartDrawer {
 	@FindBy(xpath = "//button[@name='checkout']")
 	private WebElement initiateCheckoutBtn;
 
-	// ------------------------------------
-
 	public CartDrawer(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-
-	// -------------------------------------
 
 	public String getEmptyCartText() {
 		return cartIsEmpty.getText();

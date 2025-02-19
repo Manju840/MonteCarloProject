@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class SearchedProductsPage {
-	
+
 	@FindBy(xpath = "//button[normalize-space()='Price']")
 	private WebElement selectPriceBtn;
 
@@ -30,6 +30,7 @@ public class SearchedProductsPage {
 	public void clicOnSelected(WebElement ele) {
 		ele.click();
 	}
+
 	public WebElement getSelectPriceBtn() {
 		return selectPriceBtn;
 	}

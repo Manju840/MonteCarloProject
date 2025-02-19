@@ -17,21 +17,21 @@ import pom.ProductDetails;
 import pom.ProductPage;
 
 public class TC_08_ResetFilterAddToWishlist extends BaseClass {
-	
+
 	static Logger logger = LogManager.getLogger(TC_08_ResetFilterAddToWishlist.class);
 
 	@Test
 	public void tc_08_resetFilter() throws FileNotFoundException, IOException {
-		
+
 		logger.info("ResetFilter started");
 		NavBar navbar = new NavBar(driver);
 		logger.info("clicking on women section");
 		navbar.clickWomen();
-		
+
 		CollectionsPage collectionsPage = new CollectionsPage(driver);
 		logger.info("clicking on stole");
 		collectionsPage.clickonStole();
-		
+
 		ProductPage productPage = new ProductPage(driver);
 		logger.info("entering the price from");
 		productPage.sendKeysFromPriceRange(dataUtilities.readingDataFromProperty("fromPrice0"));
@@ -45,22 +45,19 @@ public class TC_08_ResetFilterAddToWishlist extends BaseClass {
 		productPage.sendKeysToPriceRange(dataUtilities.readingDataFromProperty("toPrice2000"));
 		logger.info("clicking on any product");
 		productPage.clickOnProduct(webUtilities);
-		
+
 		ProductDetails productDetails = new ProductDetails(driver);
 		logger.info("clicking on whishlist");
 		productDetails.clickWishListProduct();
-		
+
 		String emailPopupText = productDetails.getWhatsEmailPopup().getText().trim();
 		logger.info("verifying the text of popup");
 		Assert.assertEquals(dataUtilities.readingDataFromProperty("whatsEmail"), emailPopupText);
-		
+
 		Header header = new Header(driver);
 		logger.info("clicking on whishlist button");
 		header.clickWishListButton();
 		logger.info("resetFilter completed");
-		
-		
-		
-		
+
 	}
 }

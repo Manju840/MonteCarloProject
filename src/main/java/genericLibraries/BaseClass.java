@@ -13,11 +13,11 @@ import org.testng.annotations.Listeners;
 
 @Listeners(Listener.class)
 public class BaseClass {
-	
+
 	public static WebDriver driver;
 	public DataUtilities dataUtilities = new DataUtilities();
 	public WebDriverUtilities webUtilities;
-	
+
 	@BeforeMethod
 	public void openApp() throws EncryptedDocumentException, IOException {
 		driver = new EdgeDriver();
@@ -26,13 +26,11 @@ public class BaseClass {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
 		webUtilities = new WebDriverUtilities(driver);
-				
+
 	}
-	
-	
-	
+
 	@AfterMethod
-	public void closeApp(){
+	public void closeApp() {
 		driver.quit();
 	}
 

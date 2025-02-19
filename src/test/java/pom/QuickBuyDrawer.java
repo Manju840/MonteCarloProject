@@ -22,12 +22,10 @@ public class QuickBuyDrawer {
 	@FindBy(xpath = "//a[normalize-space()='View details']")
 	private WebElement viewDetailsBtn;
 
-	// ----------------------------------------
 	public QuickBuyDrawer(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
-	// ----------------------------------------
 	public List<WebElement> getAllSizes() {
 		return allSizes;
 	}
@@ -36,8 +34,7 @@ public class QuickBuyDrawer {
 		for (WebElement size : allSizes) {
 			@Nullable
 			WebElement parentElement = size.findElement(By.xpath("./.."));
-			
-			
+
 		}
 	}
 
@@ -46,9 +43,9 @@ public class QuickBuyDrawer {
 		size.findElement(By.xpath("./.."));
 		@Nullable
 		String parent = size.getDomAttribute("class");
-		if(!parent.contains("is-disabled")) {
+		if (!parent.contains("is-disabled")) {
 			size.click();
-		}else {
+		} else {
 			System.out.println("Selected size is disbaled");
 		}
 	}
